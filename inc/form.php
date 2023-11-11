@@ -1,9 +1,10 @@
 <?php
 
 
-$firstName =    $_POST['firstName'];
-$lastName =     $_POST['lastName'];
-$email =        $_POST['email'];
+$firstName = isset($_POST['firstName']) ? $_POST['firstName'] : '';
+    $lastName = isset($_POST['lastName']) ? $_POST['lastName'] : '';
+    $email = isset($_POST['email']) ? $_POST['email'] : '';
+
 
 $errors = [
     'firstNameError' => '',
@@ -14,7 +15,7 @@ $errors = [
 if(isset($_POST['submit']))
 {
     
-
+    
 
     if(empty($firstName))
     {
